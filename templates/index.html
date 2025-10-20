@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Alarm Clock</h1>
+        <div class="clock">
+            <div id="time"></div>
+        </div>
+        <div class="alarm-form">
+            <h2>Set Alarm</h2>
+            <input type="time" id="alarm-time" required>
+            <input type="text" id="alarm-message" placeholder="Alarm message" required>
+            <button id="set-alarm">Set Alarm</button>
+        </div>
+        <div class="recording">
+            <h2>Record Custom Message</h2>
+            <button id="record-btn">Record</button>
+            <p id="recording-status">Click to start recording</p>
+            <div id="recording-result"></div>
+        </div>
+        <div class="alarms-list">
+            <h2>Current Alarms</h2>
+            <ul id="alarms"></ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
